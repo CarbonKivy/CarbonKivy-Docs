@@ -21,7 +21,7 @@ sys.path.append(os.path.abspath("../../."))
 
 from _extensions.kivy_lexer import KivyLexer
 
-from carbonkivy import __version__
+from carbonkivy import __version__, ROOT
 
 # Register the lexer with Sphinx
 lexers["kv"] = KivyLexer()
@@ -60,7 +60,7 @@ extlinks = {
 
 # -- Autoapi configuration ---------------------------------------------------
 
-autoapi_dirs = ["../../carbonkivy"]
+autoapi_dirs = [ROOT]
 autoapi_options = [
     "members",
     "undoc-members",
