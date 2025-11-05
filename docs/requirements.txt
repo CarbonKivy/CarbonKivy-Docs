@@ -3,3 +3,4 @@ sphinxawesome_theme
 sphinx-design
 sphinx-autoapi
 sphinxext-opengraph
+https://github.com/carbonkivy/carbonkivy/archive/master.zip
