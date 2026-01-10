@@ -1,6 +1,6 @@
 kivy==2.3.1
-sphinxawesome_theme==5.3.2
-sphinx-design==0.6.1
-sphinxext-opengraph==0.13.0
-sphinx==9.1.0
+sphinxawesome_theme
+sphinx-design
+sphinxext-opengraph
+sphinx
 https://github.com/carbonkivy/carbonkivy/archive/master.zip
