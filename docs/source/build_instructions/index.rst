@@ -27,6 +27,12 @@ Android and iOS
 
     You need to remove pre-compiled carbonkivy library if you are rebuilding with buildozer and also updated the version to be used. Prefered to use :confval:`buildozer android clean`.
 
+- Enable androidx support for getting most out of the modern android features.
+
+    .. code-block:: spec
+
+        android.enable_androidx = True
+
 Generate Android Build Workflows
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

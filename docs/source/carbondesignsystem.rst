@@ -16,4 +16,3 @@ A design system is a collection of pre-built, reusable assets—components, patt
 The design system is named Carbon Design System because in nature the element carbon builds complex structures from simpler compounds. This motif mimics how our individual styles and components can combine to make beautifully complex, natural, and intuitive designs.
 
 See more about the `Carbon Design System <https://carbondesignsystem.com>`_.
-
