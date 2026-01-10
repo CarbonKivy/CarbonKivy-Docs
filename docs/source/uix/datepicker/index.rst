@@ -1,7 +1,7 @@
 .. _datepicker:
 
 Date picker
------------
+===========
 
 .. rst-class:: lead
 

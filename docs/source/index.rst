@@ -65,14 +65,6 @@ Explore the full capabilities of CarbonKivy by diving into the documentation. Le
 
             uix/index
 
-    .. tab-item:: API
-
-        .. toctree::
-            :maxdepth: 4
-            :glob:
-
-            autoapi/index
-
 .. toctree::
     :hidden:
 

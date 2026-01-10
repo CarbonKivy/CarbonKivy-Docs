@@ -42,6 +42,7 @@ Live demo
 
                     ...
 
+                    from carbonkivy.app import CarbonApp
                     from carbonkivy.uix.modal import CModal
 
 
@@ -49,7 +50,7 @@ Live demo
                         pass
 
 
-                    class MyApp(self, **kwargs) -> None:
+                    class MyApp(CarbonApp) -> None:
 
                         def __init__(self, *args, **kwargs) -> None:
                             super(MyApp, self).__init__(*args, **kwargs)

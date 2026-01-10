@@ -39,7 +39,6 @@ release = __version__
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = [
-    "autoapi.extension",
     "sphinx_design",
     "sphinxext.opengraph",
     "sphinx.ext.autodoc",
@@ -57,19 +56,6 @@ extlinks = {
     "ghdir": ("https://github.com/CarbonKivy/CarbonKivy/tree/master/%s", "%s"),
     "kivy": ("https://kivy.org/%s", "%s"),
 }
-
-# -- Autoapi configuration ---------------------------------------------------
-
-autoapi_dirs = [ROOT]
-autoapi_options = [
-    "members",
-    "undoc-members",
-    "show-inheritance",
-]
-autoapi_file_patterns = ["*.py"]
-autoapi_type = "python"
-autoapi_generate_api_docs = True
-autoapi_keep_files = False
 
 # -- Options for opengraph ---------------------------------------------------
 

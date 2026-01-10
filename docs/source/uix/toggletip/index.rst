@@ -23,9 +23,6 @@ Toggletips reveal supplemental content when a user clicks a button and remains a
 Live demo
 ---------
 
-Live demo
----------
-
 .. note::
 
     This live demo contains only a preview of functionality and styles available for this component. Actual widgets may not show the exact same behavior but similar to expected.
