@@ -20,8 +20,6 @@ Low contrast
 High contrast
 ~~~~~~~~~~~~~
 
-    Under Development
-
 .. figure:: /_static/images/notification/notification-style-high-contrast.png
     :alt: Carbon Design Notification
     :class: centered
@@ -43,14 +41,13 @@ Live demo
 
             <iframe title="Component demo" class="StorybookDemo-module--iframe--dc8d2" src="https://react.carbondesignsystem.com/iframe.html?id=components-notifications-toast--default&globals=theme:white" frameborder="no" sandbox="allow-forms allow-scripts allow-same-origin"></iframe>
 
-        .. code-block:: python
-
-            # only low-contrast notification is available.
+        .. code-block:: kv
 
             CNotificationToast:
                 status: "Error"
                 title: "Notification title"
                 subtitle: "Subtitle text goes here"
+                contrast: "High"
                 time_caption_enabled: True
 
 Status
@@ -69,11 +66,31 @@ Use the :class:`~carbonkivy.uix.notification.notification.CBaseNotification.stat
 
     def notify_error(self, *args) -> None:
         self.notification = CNotificationToast(
-                title="Server instance unavailable",
-                subtitle="The server instance is no longer running because of an error.",
-                status="Error",
-                time_caption_enabled=True,
-            ).open()
+            title="Server instance unavailable",
+            subtitle="The server instance is no longer running because of an error.",
+            status="Error", # defaults to "Info"
+            time_caption_enabled=True,
+        ).open()
+
+Contrast
+--------
+Two contrast options for notification are available:
+
+- Low
+- High
+
+Use the :class:`~carbonkivy.uix.notification.notification.CBaseNotification.contrast` property to define the token for the notification contrast.
+
+.. code-block:: python
+
+    def notify_error(self, *args) -> None:
+        self.notification = CNotificationToast(
+            title="Server instance unavailable",
+            subtitle="The server instance is no longer running because of an error.",
+            status="Error",
+            contrast="High", # defaults to "Low"
+            time_caption_enabled=True,
+        ).open()
 
 Variant
 -------
@@ -100,12 +117,12 @@ Use the :class:`~carbonkivy.uix.notification.notification.CNotification.variant`
 
     def notify_error(self, *args) -> None:
         self.notification = CNotification(
-                title="Server instance unavailable",
-                subtitle="The server instance is no longer running because of an error.",
-                status="Error",
-                time_caption_enabled=True,
-                variant="Toast"
-            ).open()
+            title="Server instance unavailable",
+            subtitle="The server instance is no longer running because of an error.",
+            status="Error",
+            time_caption_enabled=True,
+            variant="Toast"
+        ).open()
 
 :class:`~carbonkivy.uix.notification.notification.CNotificationInline`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -130,11 +147,11 @@ Toast notifications are non-modal, time-based window elements used to display sh
 
     def notify_error(self, *args) -> None:
         self.notification = CNotificationToast(
-                title="Server instance unavailable",
-                subtitle="The server instance is no longer running because of an error.",
-                status="Error",
-                time_caption_enabled=True,
-            ).open()
+            title="Server instance unavailable",
+            subtitle="The server instance is no longer running because of an error.",
+            status="Error",
+            time_caption_enabled=True,
+        ).open()
 
 Actionable
 ----------
@@ -151,14 +168,14 @@ Use the :class:`~carbonkivy.uix.notification.notification.CBaseNotification.acti
 
     def notify_info(self, *args) -> None:
         self.notification = CNotificationToast(
-                title="Server instance updated",
-                subtitle="The server instance location has been updated.",
-                status="Info",
-                action_button=CButtonPrimary(
-                    text="View Server",
-                    on_press=self.resolve_notification()
-                )
-            ).open()
+            title="Server instance updated",
+            subtitle="The server instance location has been updated.",
+            status="Info",
+            action_button=CButtonPrimary(
+                text="View Server",
+                on_press=self.resolve_notification()
+            )
+        ).open()
 
     def resolve_notification(self, *args) -> None:
         print("Resolved.")

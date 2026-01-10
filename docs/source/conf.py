@@ -13,15 +13,15 @@ from sphinx.application import Sphinx
 from sphinx.highlighting import lexers
 from sphinx.util.docfields import Field
 from sphinxawesome_theme.postprocess import Icons
+from carbonkivy import __version__
+from carbonkivy.config import ROOT
 
 os.environ["READTHEDOCS"] = "true"
 
 sys.path.append(os.path.abspath("."))
-sys.path.append(os.path.abspath("../../."))
+sys.path.append(ROOT)
 
 from _extensions.kivy_lexer import KivyLexer
-
-from carbonkivy import __version__, ROOT
 
 # Register the lexer with Sphinx
 lexers["kv"] = KivyLexer()
@@ -30,7 +30,7 @@ lexers["kv"] = KivyLexer()
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = "CarbonKivy"
-copyright = '2025, "Kartavya Shukla"'
+copyright = '2025-2026, "Kartavya Shukla"'
 author = '"Kartavya Shukla"'
 version = __version__
 release = __version__
