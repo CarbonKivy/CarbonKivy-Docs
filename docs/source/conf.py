@@ -54,7 +54,7 @@ autodoc_mock_imports = ["kivy"]
 autoapi_python_mock_imports = [
     "kivy",
 ]
-autoapi_dirs = [ROOT, ROOT.parent]
+autoapi_dirs = [ROOT]
 templates_path = ["_templates"]
 exclude_patterns = []
 extlinks = {
