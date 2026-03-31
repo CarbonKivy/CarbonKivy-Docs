@@ -19,7 +19,7 @@ from carbonkivy.config import ROOT
 
 
 sys.path.append(os.path.abspath("."))
-sys.path.append(ROOT)
+sys.path.append(ROOT.parent)
 
 from _extensions.kivy_lexer import KivyLexer
 
@@ -46,8 +46,14 @@ extensions = [
     "sphinx.ext.napoleon",
     "sphinx.ext.viewcode",
     "sphinxawesome_theme",
+    "autoapi.extension"
 ]
 master_doc = "index"
+autodoc_mock_imports = ["kivy"]
+autoapi_python_mock_imports = [
+    "kivy",
+]
+
 templates_path = ["_templates"]
 exclude_patterns = []
 extlinks = {
