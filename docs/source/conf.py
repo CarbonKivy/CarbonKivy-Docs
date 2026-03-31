@@ -8,6 +8,7 @@ import sys
 
 # Don't allow Kivy to handle args
 os.environ["KIVY_NO_ARGS"] = "1"
+os.environ["READTHEDOCS"] = "true"
 
 from sphinx.application import Sphinx
 from sphinx.highlighting import lexers
@@ -16,7 +17,6 @@ from sphinxawesome_theme.postprocess import Icons
 from carbonkivy import __version__
 from carbonkivy.config import ROOT
 
-os.environ["READTHEDOCS"] = "true"
 
 sys.path.append(os.path.abspath("."))
 sys.path.append(ROOT)
@@ -48,7 +48,7 @@ extensions = [
     "sphinxawesome_theme",
 ]
 master_doc = "index"
-autodoc_mock_imports = ["kivy", "carbonkivy"]
+autodoc_mock_imports = ["kivy"]
 templates_path = ["_templates"]
 exclude_patterns = []
 extlinks = {
