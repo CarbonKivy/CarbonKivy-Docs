@@ -43,7 +43,7 @@ Live demo
             from kivy.properties import StringProperty
             from carbonkivy.behaviors import TooltipBehavior
             from carbonkivy.uix.link import CLink
-            from carbonkivy.uix.tooltip import CToggletip
+            from carbonkivy.uix.toggletip import CToggletip
 
 
             class MyToggletip(CToggletip):
