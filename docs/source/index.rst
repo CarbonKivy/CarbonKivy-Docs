@@ -70,3 +70,4 @@ Explore the full capabilities of CarbonKivy by diving into the documentation. Le
 
     build_instructions/index
     devtools/index
+    utilities/index

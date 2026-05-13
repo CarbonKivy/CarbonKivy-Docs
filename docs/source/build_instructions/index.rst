@@ -19,9 +19,9 @@ Android and iOS
 
     .. code-block:: spec
 
-        requirements = python3, kivy==2.3.0, android, carbonkivy
+        requirements = python3, kivy==2.3.1, android, pyjnius, pygments, carbonkivy
 
-        # requirements = python3, kivy==2.3.0, android, https://github.com/CarbonKivy/CarbonKivy/archive/master.zip # development version
+        # requirements = python3, kivy==2.3.1, android, pyjnius, pygments, https://github.com/CarbonKivy/CarbonKivy/archive/master.zip # development version
 
 .. caution::
 

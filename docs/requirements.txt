@@ -14,4 +14,6 @@ sphinxcontrib-qthelp==2.0.0
 sphinxcontrib-serializinghtml==2.0.0
 sphinxext-opengraph==0.13.0
 astroid==4.0.3
+pyjnius
+pygments
 https://github.com/carbonkivy/carbonkivy/archive/master.zip

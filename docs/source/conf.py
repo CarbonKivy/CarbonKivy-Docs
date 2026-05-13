@@ -5,22 +5,21 @@
 
 import os
 import sys
+from pathlib import Path
 
-# Don't allow Kivy to handle args
 os.environ["KIVY_NO_ARGS"] = "1"
+os.environ["KIVY_NO_CONFIG"] = "1"
+os.environ["KIVY_USE_DEFAULTCONFIG"] = "1"
 os.environ["READTHEDOCS"] = "true"
 
 from sphinx.application import Sphinx
 from sphinx.highlighting import lexers
 from sphinx.util.docfields import Field
 from sphinxawesome_theme.postprocess import Icons
-from carbonkivy import __version__
-from carbonkivy.config import ROOT
-
+from carbonkivy import __version__, ROOT
 
 sys.path.append(os.path.abspath("."))
 sys.path.append(ROOT)
-sys.path.append(ROOT.parent)
 
 from _extensions.kivy_lexer import KivyLexer
 
@@ -42,18 +41,32 @@ release = __version__
 extensions = [
     "sphinx_design",
     "sphinxext.opengraph",
-    "sphinx.ext.autodoc",
     "sphinx.ext.intersphinx",
     "sphinx.ext.napoleon",
     "sphinx.ext.viewcode",
     "sphinxawesome_theme",
+    "sphinx.ext.autodoc",
     "autoapi.extension"
 ]
 master_doc = "index"
-autodoc_mock_imports = ["kivy"]
+autodoc_mock_imports = [
+    "kivy",
+    "jnius",
+    "android",
+    "android.runnable",
+    "kivy.metrics",
+    "carbonkivy.config",
+]
 autoapi_python_mock_imports = [
     "kivy",
+    "jnius",
+    "android",
+    "android.runnable",
+    "kivy.metrics",
+    "carbonkivy.config",
 ]
+
+autoapi_ignore = ["*test*", "*__pycache__*", "*.so", "*.pyc"]
 autoapi_dirs = [ROOT]
 templates_path = ["_templates"]
 exclude_patterns = []
