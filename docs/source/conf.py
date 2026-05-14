@@ -57,7 +57,6 @@ autodoc_mock_imports = [
     "android",
     "android.runnable",
     "kivy.metrics",
-    "carbonkivy.config",
 ]
 autoapi_python_mock_imports = [
     "kivy",
@@ -65,7 +64,6 @@ autoapi_python_mock_imports = [
     "android",
     "android.runnable",
     "kivy.metrics",
-    "carbonkivy.config",
 ]
 
 autoapi_ignore = ["*test*", "*__pycache__*", "*.so", "*.pyc"]
