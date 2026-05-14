@@ -15,7 +15,7 @@ os.environ["READTHEDOCS"] = "true"
 import carbonkivy
 from carbonkivy import __version__, ROOT
 
-ROOT = carbonkivy.__file__
+ROOT = os.path.dirname(carbonkivy.__file__)
 
 sys.path.append(os.path.abspath("."))
 sys.path.append(ROOT)
@@ -77,8 +77,6 @@ autoapi_python_mock_imports = [
     "android.runnable",
     "kivy.metrics",
 ]
-
-autoapi_ignore = ["*test*", "*__pycache__*",]
 autoapi_dirs = [ROOT]
 templates_path = ["_templates"]
 exclude_patterns = []
