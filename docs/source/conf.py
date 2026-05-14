@@ -21,6 +21,8 @@ from carbonkivy import __version__, ROOT
 sys.path.append(os.path.abspath("."))
 sys.path.append(ROOT)
 
+os.makedirs("./autoapi", exist_ok=True)
+
 from _extensions.kivy_lexer import KivyLexer
 
 # Register the lexer with Sphinx
