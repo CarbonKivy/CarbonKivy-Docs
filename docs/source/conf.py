@@ -12,16 +12,18 @@ os.environ["KIVY_NO_CONFIG"] = "1"
 os.environ["KIVY_USE_DEFAULTCONFIG"] = "1"
 os.environ["READTHEDOCS"] = "true"
 
-from sphinx.application import Sphinx
-from sphinx.highlighting import lexers
-from sphinx.util.docfields import Field
-from sphinxawesome_theme.postprocess import Icons
 from carbonkivy import __version__, ROOT
 
 sys.path.append(os.path.abspath("."))
 sys.path.append(ROOT)
 
 os.makedirs("./autoapi", exist_ok=True)
+
+from sphinx.application import Sphinx
+from sphinx.highlighting import lexers
+from sphinx.util.docfields import Field
+from sphinxawesome_theme.postprocess import Icons
+
 
 from _extensions.kivy_lexer import KivyLexer
 
