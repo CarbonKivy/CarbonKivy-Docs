@@ -66,7 +66,7 @@ autoapi_python_mock_imports = [
     "kivy.metrics",
 ]
 
-autoapi_ignore = ["*test*", "*__pycache__*", "*.so", "*.pyc"]
+autoapi_ignore = ["*test*", "*__pycache__*",]
 autoapi_dirs = [ROOT]
 templates_path = ["_templates"]
 exclude_patterns = []
