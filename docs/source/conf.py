@@ -12,7 +12,10 @@ os.environ["KIVY_NO_CONFIG"] = "1"
 os.environ["KIVY_USE_DEFAULTCONFIG"] = "1"
 os.environ["READTHEDOCS"] = "true"
 
+import carbonkivy
 from carbonkivy import __version__, ROOT
+
+ROOT = carbonkivy.__file__
 
 sys.path.append(os.path.abspath("."))
 sys.path.append(ROOT)
