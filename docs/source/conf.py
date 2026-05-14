@@ -53,6 +53,13 @@ extensions = [
     "autoapi.extension"
 ]
 master_doc = "index"
+autoapi_options = [
+    'members', 
+    'undoc-members', 
+    'show-inheritance', 
+    'show-module-summary', 
+    'imported-members',
+]
 autodoc_mock_imports = [
     "kivy",
     "jnius",
